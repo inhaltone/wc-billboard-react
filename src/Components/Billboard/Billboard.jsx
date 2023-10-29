@@ -1,15 +1,21 @@
 import styles from './billboard.module.css';
 import {useEffect, useRef, useState} from "react";
 
-export default function Billboard({children, clones = 20, rate = 1, direction = 'left'}) {
+export default function Billboard({children, clones = 20, rate = 1, direction = 'left', hover = false}) {
+    // variables for smooth animation
     let then = Date.now();
     let interval = 1000 / 30;
 
+    // refs
     const billboardContent = useRef(null);
     const billboardRoot = useRef(null);
 
+    // State hooks
+    const [state, setState] = useState(true);
     const [animationFrameId, setAnimationFrameId] = useState(0);
     const [offset, setOffset] = useState(-1);
+
+    // setup logic for clone nodes
     const clonesList = [];
 
     for (let i = 0; i < clones; i++) {
@@ -44,6 +50,7 @@ export default function Billboard({children, clones = 20, rate = 1, direction = 
         }
     }
 
+
     function start() {
         animate();
     }
@@ -52,13 +59,24 @@ export default function Billboard({children, clones = 20, rate = 1, direction = 
         cancelAnimationFrame(animationFrameId);
     }
 
-    useEffect(() => {
-        start();
-    }, []);
+    function handleMouseEnter() {
+        if (!hover) return;
+        setState(false);
+    }
 
+    function handleMouseOut() {
+        if (!hover) return;
+        setState(true);
+    }
+
+    useEffect(() => {
+        state ? start() : stop();
+        // eslint-disable-next-line
+    }, [state]);
 
     return (
-        <div ref={billboardRoot} className={styles.billboardRoot}>
+        <div ref={billboardRoot} className={styles.billboardRoot} onMouseOut={handleMouseOut}
+             onMouseEnter={handleMouseEnter}>
             <div ref={billboardContent} className={styles.billboardContent}
                  style={{transform: `translate3d(${offset}px, 0, 0)`}}>
                 {

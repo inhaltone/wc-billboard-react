@@ -5,7 +5,7 @@ function App() {
     return (
         <div className="App">
             <header className="App-header">
-                <Billboard>
+                <Billboard hover={true}>
                     <h5>React Component: Billboard</h5>
                 </Billboard>
                 <Billboard rate={2}>
