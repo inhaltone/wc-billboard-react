@@ -1,0 +1,14 @@
+.billboardRoot {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+.billboardContent {
+    width: 150%;
+    display: flex;
+    overflow: hidden;
+}
+
+.billBoardItem {
+    color: white;
+}
