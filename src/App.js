@@ -20,7 +20,7 @@ function App() {
                 <Billboard rate={2} direction='right'>
                     <h5>React Component: Billboard</h5>
                 </Billboard>
-                <Billboard rate={.5} direction='right'>
+                <Billboard clones={32} hover={true} rate={.5} direction='right'>
                     <h5>React Component: Billboard</h5>
                 </Billboard>
             </header>
