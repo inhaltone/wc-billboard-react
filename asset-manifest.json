@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.172988f2.css",
-    "main.js": "/static/js/main.0e1c4c16.js",
-    "static/js/787.1d25cc7b.chunk.js": "/static/js/787.1d25cc7b.chunk.js",
-    "index.html": "/index.html",
-    "main.172988f2.css.map": "/static/css/main.172988f2.css.map",
-    "main.0e1c4c16.js.map": "/static/js/main.0e1c4c16.js.map",
-    "787.1d25cc7b.chunk.js.map": "/static/js/787.1d25cc7b.chunk.js.map"
+    "main.css": "/wc-billboard-react/static/css/main.172988f2.css",
+    "main.js": "/wc-billboard-react/static/js/main.8a1b499b.js",
+    "static/js/787.1d25cc7b.chunk.js": "/wc-billboard-react/static/js/787.1d25cc7b.chunk.js",
+    "index.html": "/wc-billboard-react/index.html",
+    "main.172988f2.css.map": "/wc-billboard-react/static/css/main.172988f2.css.map",
+    "main.8a1b499b.js.map": "/wc-billboard-react/static/js/main.8a1b499b.js.map",
+    "787.1d25cc7b.chunk.js.map": "/wc-billboard-react/static/js/787.1d25cc7b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.172988f2.css",
-    "static/js/main.0e1c4c16.js"
+    "static/js/main.8a1b499b.js"
   ]
 }
